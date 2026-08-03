@@ -1,6 +1,6 @@
 # Slip Sliding
 
-![Image](docs/source/images/Duotone.webp "duotone image created by sliders")
+![Image](./docs/source/images/Duotone.webp "duotone image created by sliders")
 
 ## HTML Sliders
 
