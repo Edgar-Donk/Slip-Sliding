@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Adjust Slider Width</title>
+
+<style>
+
+:root {
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+--s-width: 85%;
+}
+
+h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: darkgray;
+  letter-spacing: .2em;
+}
+
+.wrap { 
+  width: 30em;
+  border: 1px solid silver;
+  border-radius: 1em;
+  background-color: ghostwhite;
+  padding: 0 0 1em 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.labels {
+  display: flex;
+}
+
+.o_txt {
+  flex: 1;
+}
+
+/* manually adjust slider to look right */
+#slider {
+  width: var(--s-width); 
+  margin: auto;
+  cursor: grab;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h2>Budget</h2>
+  <input id="slider" type="range" min="0" max="100" 
+  step="10" list="steplist" value="40" >
+  <datalist id="steplist">
+     <option>0</option>
+     <option>10</option>
+     <option>20</option>
+     <option>30</option>
+     <option>40</option>
+     <option>50</option>
+     <option>60</option>
+     <option>70</option>
+     <option>80</option>
+     <option>90</option>
+     <option>100</option>
+  </datalist>
+  <div class="labels">
+    <span class="o_txt">1</span>
+    <span class="o_txt">1</span>
+    <span class="o_txt">1</span>
+    <span class="o_txt">1</span>
+    <span class="o_txt">1</span>
+    <span class="o_txt">1</span>
+  </div>
+ </div>
+   
+    <legend>Adjust Slider Width <em>Make the ticks and labels in upper slider align</em></legend>
+    <label>
+      <strong>Adjust by Moving Lower Slider</strong> 
+    <input type="range" min="70" max="90" step="0.1" value="85" 
+         oninput="this.nextElementSibling.value = this.value">
+  <output>85</output>
+   </label>
+
+<script>
+addEventListener("input", (event) => {  
+    document.documentElement.style.setProperty(
+    `--s-width`, `${event.target.value}%`)
+    });
+</script>
+</body>
+</html>

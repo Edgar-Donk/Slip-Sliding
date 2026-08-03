@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <title>Adding Slider Spinbox Outputs</title>
+   <link rel="stylesheet" href="../css/slider-style.css">
+   </head>
+   <body>
+      <div class="wrap"> 
+         <label>Adding Slider Spinbox Outputs</label>  
+         <form id="example-form">
+         
+            <input type="range"  name="b" value="50" > +
+            <input type="number"  name="a" value="10"> =
+            <output name="result" for="a b">60</output>
+         </form>
+      </div> 
+   <script>
+      const form = document.getElementById("example-form");
+      const a = form.elements["a"];
+      const b = form.elements["b"];
+      const result = form.elements["result"];
+
+      function updateResult() {
+         const aValue = a.valueAsNumber;
+         const bValue = b.valueAsNumber;
+         result.value = aValue + bValue;
+      }
+
+      form.addEventListener("input", updateResult);
+
+      updateResult();
+   </script>
+   </body>
+</html

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <title>Slider Spinbox Crossover JS</title>
+   <link rel="stylesheet" href="../css/slider-style.css">
+   </head>
+   <body>
+<div class="wrap">
+   <label>Slider Spinbox Crossover using Javascript</label>
+      <input id="slider" type="range" value="70" >
+      <input id="amount" type="number" value="70" min="0" max="100" >
+</div>
+
+<script>
+   slid = document.getElementById('slider');
+   am = document.getElementById('amount'); 
+   slid.addEventListener("input", e => {
+      am.value = e.target.value;
+   })
+   am.addEventListener("input", e => {
+      slid.value = e.target.value;
+   })
+
+</script>
+   </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Multi Slider Adjust Element</title>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 1em/1.5 trebuchet ms, tahoma, sans-serif;
+  --hue: 0;
+  --rect-w: 80px;
+}
+
+#pinky {
+  width: var(--rect-w);
+  height: 100px;
+  background-color: hsl(var(--hue) 100% 50%);
+}
+
+[type=range] {
+  margin: 0;
+  padding: 0;
+  width: 25em;
+  height: 1.5em;
+  background: transparent;
+}
+
+.wrap {
+     width: 30em;
+     border: 1px solid silver;
+     border-radius: 1em;
+     background-color: ghostwhite;
+     padding: 1em 0 1em 0;
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     }
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<div id='pinky'></div>
+    <br><br>
+    <h4>Adjust Rectangle Width and Hue</h4>
+    <label>Change Width</label>
+    <input type="range" name="--rect-w" min="80" max="120" value="80" data-suffix="px"> 
+        <output>Move the Slider to Change Width</output>
+    <label>Change Hue</label>
+    <input type="range" name="--hue" min="0" max="360" value="0" step="0.1"> 
+        <output>Move the Slider Change Hue</output>    
+</div>
+<script>
+    addEventListener("input", e => {
+       const inp = e.target;
+       const effect = inp.value + (inp.dataset.suffix||'')
+
+       inp.nextElementSibling.value = effect;
+       document.body.style.setProperty(inp.name, effect);
+    })
+</script>
+</body>
+</html>

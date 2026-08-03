@@ -1,0 +1,41 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <title>Show Labels Slider</title>
+      <link rel="stylesheet" href="../css/slider-style.css">   
+   <style>
+ 
+   datalist {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      writing-mode: vertical-lr;
+      width: 400px;
+   }
+   
+   option {
+      padding: 0;
+   }
+   
+   input[type="range"] {
+      width: 400px;
+      margin: 0;
+   }
+   </style>
+   </head>
+   <body>      
+      <div class="wrap">
+         <h2>Choose a Comfortable Temperature</h2>        
+         <label>Slider with Ticks and Rotated Labels</label>
+         <input type="range" min="0" max="10" step="2.5" list="steplist">
+      <datalist id="steplist">
+         <option label="0">0</option>
+         <option label="2.5">2.5</option>
+         <option label="5">5</option>
+         <option label="7.5">7.5</option>
+         <option label="10">10</option>
+      </datalist>
+      </div>   
+   </body>
+   </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Four Sliders Anchored Simplified</title>
+<style>
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+
+input {
+   width: 100%;
+   }
+ 
+output {
+  background: cyan;
+  border: 2px solid darkblue;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+label {
+     position: relative;
+  width: 100%;   
+}
+
+input::-webkit-slider-thumb {
+  anchor-name: --thumb;
+}
+
+input::-moz-range-thumb {
+  anchor-name: --thumb;
+}
+
+output {
+  position-anchor: --thumb;
+  position: absolute;
+  position-area: top;
+  margin-bottom: 5px;
+   justify-self: unsafe anchor-center;
+  align-self: unsafe end;
+}
+
+</style>
+</head>
+<body>
+<label>
+<input type="range">
+<output>50</output>
+</label>
+
+<label>
+<input type="range" min="20" max="940">
+<output>480</output>
+</label>
+
+<label style="width: 75%;">
+<input type="range" min="50" max="60" step="2">
+<output>55</output>
+</label>
+
+<label style="width: 55%;">
+<input type="range" min="-20" max="20">
+<output>0</output>
+</label>
+
+<script>
+
+addEventListener("input", e => {
+e.target.nextElementSibling.value = e.target.value  ;
+});
+
+</script>
+</body>
+</html>

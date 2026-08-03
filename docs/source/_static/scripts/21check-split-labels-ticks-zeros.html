@@ -1,0 +1,66 @@
+<style>
+
+:root {
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: darkgray;
+  letter-spacing: .2em;
+}
+
+.wrap { 
+  width: 30em;
+  border: 1px solid silver;
+  border-radius: 1em;
+  background-color: ghostwhite;
+  padding: 0 0 1em 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.labels {
+  display: flex;
+}
+
+.o_txt {
+  flex: 1;
+}
+
+/* manually adjust slider to look right */
+.slider {
+  width: 87.2%; 
+  margin: auto;
+  cursor: grab;
+}
+
+</style>
+
+<div class="wrap">
+  <h2>Budget</h2>
+  <input class="slider" type="range" min="0" max="100" step="10" list="steplist" value="40" />
+  <datalist id="steplist">
+     <option>0</option>
+     <option>10</option>
+     <option>20</option>
+     <option>30</option>
+     <option>40</option>
+     <option>50</option>
+     <option>60</option>
+     <option>70</option>
+     <option>80</option>
+     <option>90</option>
+     <option>100</option>
+  </datalist>
+  <div class="labels">
+    <span class="o_txt">0</span>
+    <span class="o_txt">0</span>
+    <span class="o_txt">0</span>
+    <span class="o_txt">0</span>
+    <span class="o_txt">0</span>
+    <span class="o_txt">0</span>
+  </div>
+</div>

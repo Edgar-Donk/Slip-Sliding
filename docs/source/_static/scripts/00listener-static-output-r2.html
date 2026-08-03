@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Listener Slider Static Output</title>
+   <link rel="stylesheet" href="../css/slider-style.css">
+
+</head>
+   <body>
+      <div class="wrap">   
+         <label>Static Output using Listener</label>
+         <input type="range" min="0" max="50" value="0"> 
+            <output>Move the Slider</output>
+      </div>
+   <script>
+    addEventListener("input", event => {
+      event.target.nextElementSibling.value = event.target.value;
+    })
+   </script>
+   </body>
+</html>

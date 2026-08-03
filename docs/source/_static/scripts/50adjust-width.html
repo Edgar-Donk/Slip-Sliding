@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Adjust Width</title>
+   <link rel="stylesheet" href="../css/slider-style.css"> 
+<style>
+   
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font: 1em/1.5 trebuchet ms, tahoma, sans-serif;
+}
+
+legend {
+  font-size: 1.1em;
+  color: darkgray;
+  margin: 1em;
+}
+   
+#pinky {
+  width: 80px;
+  height: 100px;
+  background-color: pink;
+  margin: auto;
+}
+
+[type=range] {
+  margin: 0;
+  padding: 0;
+  width: 12.5em;
+  height: 1.5em;
+  background: transparent;
+}
+</style>
+</head>
+<body>
+<div id='pinky'></div> 
+<section class="wrap">
+  <legend>Adjust Pink Rectangle Width</legend>
+  <input type="range" min="80" max="100"  
+  step="1" value="80" oninput="this.nextElementSibling.value = this.value">
+<output>Move the Slider</output>
+
+</section>
+
+
+<script>
+
+const rect = document.getElementById('pinky')
+
+addEventListener('input', e => {
+  rect.style.width = e.target.value + 'px'
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+	<!DOCTYPE html>
+	<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Slider with Ticks and Labels</title>
+<style>
+
+:root {
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+}
+ 
+.wrap { 
+  width: 30em;
+  border: 1px solid silver;
+  border-radius: 1em;
+  background-color: ghostwhite;
+  padding: 0 0 1em 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.labels {
+  display: flex;
+}
+
+span {
+  flex: 1;
+}
+
+/* manually adjust slider to look right */
+input[type="range"] {
+  width: 87.2%; 
+  margin: auto;
+  cursor: grab;
+}
+
+</style>
+    </head>
+    <body>
+<div class="wrap">
+  <h2>Budget</h2>
+  <input type="range" min="0" max="100" step="10" list="steplist" value="40" />
+  <datalist id="steplist">
+     <option>0</option>
+     <option>10</option>
+     <option>20</option>
+     <option>30</option>
+     <option>40</option>
+     <option>50</option>
+     <option>60</option>
+     <option>70</option>
+     <option>80</option>
+     <option>90</option>
+     <option>100</option>
+  </datalist>
+  <div class="labels">
+    <span>$100</span>
+    <span>$1K</span>
+    <span>$10K</span>
+    <span>$100K</span>
+    <span>$1M</span>
+    <span>$10M</span>
+  </div>
+</div>
+   </body>
+	</html>   

@@ -1,0 +1,30 @@
+<h3>Source element:</h3>
+   <p id="source">
+     <style>
+       #source {
+         color: red;
+       }
+       #text {
+         text-transform: uppercase;
+       }
+     </style>
+     <span id="text">
+       Take a look at<br />
+       how this text<br />
+       is interpreted below.
+     </span>
+     <span style="display:none">HIDDEN TEXT</span>
+   </p>
+   <h3>Result of textContent:</h3>
+   <textarea id="textContentOutput" rows="18" cols="40" readonly>…</textarea>
+   <h3>Result of innerText:</h3>
+   <textarea id="innerTextOutput" rows="6" cols="40" readonly>…</textarea>
+   
+   <script>
+   const source = document.getElementById("source");
+   const textContentOutput = document.getElementById("textContentOutput");
+   const innerTextOutput = document.getElementById("innerTextOutput");
+   
+   textContentOutput.value = source.textContent;
+   innerTextOutput.value = source.innerText;
+   </script>

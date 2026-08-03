@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Four Anchored Plain Sliders</title>
+<style>
+.range-wrap {
+  position: relative;
+  margin: 0 auto 3rem;
+}
+[type=range] {
+  width: 100%;
+}
+
+output {
+  background: cyan;
+  border: 2px solid darkblue;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+   #range1::-webkit-slider-thumb {
+      anchor-name: --thumb1;
+   }
+
+   #range1::-moz-range-thumb {
+      anchor-name: --thumb1;
+   }
+      #range2::-webkit-slider-thumb {
+      anchor-name: --thumb2;
+   }
+
+   #range2::-moz-range-thumb {
+      anchor-name: --thumb2;
+   }
+      #range3::-webkit-slider-thumb {
+      anchor-name: --thumb3;
+   }
+
+   #range3::-moz-range-thumb {
+      anchor-name: --thumb3;
+   }
+   
+      #range4::-webkit-slider-thumb {
+      anchor-name: --thumb4;
+   }
+
+   #range4::-moz-range-thumb {
+      anchor-name: --thumb4;
+   }
+   
+   #bubble1 {
+      position-anchor: --thumb1;
+      position: absolute;
+      position-area: top;
+      margin-bottom: 5px;
+   }
+   #bubble2 {
+      position-anchor: --thumb2;
+      position: absolute;
+      position-area: top;
+      margin-bottom: 5px;
+   }
+   #bubble3 {
+      position-anchor: --thumb3;
+      position: absolute;
+      position-area: top;
+      margin-bottom: 5px;
+   }
+   #bubble4 {
+      position-anchor: --thumb4;
+      position: absolute;
+      position-area: top;
+      margin-bottom: 5px;
+   } 
+
+body {
+  margin: 2rem;
+}              
+</style>
+</head>
+<body>
+<div class="range-wrap">
+  <input type="range" id="range1">
+  <output id="bubble1"></output>
+</div>
+
+<div class="range-wrap">
+  <input type="range" id="range2" min="20" max="940">
+  <output id="bubble2"></output>
+</div>
+
+<div class="range-wrap" style="width: 75%;">
+  <input type="range" id="range3" min="50" max="60" step="2">
+  <output id="bubble3"></output>
+</div>
+
+<div class="range-wrap" style="width: 55%;">
+  <input type="range" id="range4" min="-20" max="20">
+  <output id="bubble4"></output>
+</div>
+
+<script>
+addEventListener("input", e => {
+   e.target.nextElementSibling.value = e.target.value
+});   
+</script>
+</body>
+</html>
