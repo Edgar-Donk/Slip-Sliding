@@ -7,7 +7,8 @@ Contributors
 Edgar Donk, but mainly all those people working on python and Sphinx,
 without whom this would not have been possible.
 
-Ana Tudor,
+Special thanks to the following
+Ana Tudor, Temani Afif, Mads Stoumann and The Publishing Project
 
 =======
 Contact
