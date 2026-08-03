@@ -127,7 +127,7 @@ p.logo__title {
 /* for AL in authors */
 @font-face {
      font-family: "Kingofthieves";
-     src: url(../fonts/kingofthieves/Kingofthieves-v6mL.ttf);
+     src: url(../_static/fonts/kingofthieves/Kingofthieves-v6mL.ttf);
 }
 
 .keys {
