@@ -1,0 +1,17 @@
+:root {
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.wrap {
+     width: 30em;
+     border: 1px solid silver;
+     border-radius: 1em;
+     background-color: ghostwhite;
+     padding: 0 0 1em 0;
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     margin: auto;
+     }
