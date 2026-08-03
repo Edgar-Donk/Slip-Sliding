@@ -82,7 +82,7 @@ so the root part of CSS is placed in the external script (as slider-style-r1.css
 
    </details>
 
-
+|
 
 .. |urarr|   unicode:: U+2197 .. UPRight ARROW
 
