@@ -1,0 +1,7 @@
+sphinx
+pydata_sphinx_theme
+sphinx-copybutton
+# sphinx.ext.autosummary
+# sphinx.ext.autosectionlabel
+sphinx_togglebutton
+urllib3<2
