@@ -26,10 +26,14 @@ Repository
 You should find all the examples and with code for html, css, js and the
 necessary images here.
 
+`GitHub <https://github.com/Edgar-Donk/Slip-Sliding>`_
+
 Read the Docs
 =============
 
 Where you'll find the explanations.
+
+` ReadtheDocs <https://slip-sliding.readthedocs.io/en/latest/>`_
 
 More
 ====
