@@ -54,8 +54,8 @@ html_sidebars = {
 html_theme_options = {
    "logo": {
       "text": "Slip Sliding",
-      "image_light": 'bigbenc.avif',
-      "image_dark": "bigbencneon.avif",
+      "image_light": '_static/bigbenc.avif',
+      "image_dark": "_static/bigbencneon.avif",
    }
 }
 
@@ -65,13 +65,10 @@ smartquotes = False
 
 source_encoding = 'utf-8'
 
-rst_prolog = f"""
+rst_prolog = """
 .. role:: AL
     :class: keys
 """
 
 
-#rst_epilog = f"""
-#..role:: BT
-#    :class: swim
-#"""
+
