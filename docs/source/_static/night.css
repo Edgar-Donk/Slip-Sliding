@@ -1,5 +1,10 @@
 /* multiplied star animation time by 8 */
-@font-face { font-family: Kingofthieves; src: url('fonts/kingofthieves/Kingofthieves-v6mL.ttf'); }
+@font-face { font-family: "Kingofthieves"; 
+   src: url('fonts/kingofthieves/Kingofthieves-v6mL.ttf')  format("ttf");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap; 
+      }
 
 html {
   display: flex;
@@ -108,7 +113,7 @@ html {
     //background-color: rgba(255,255,0,0.5);
     opacity: 0; // 0 cannot be seen, opacity 1 totally visible
     transform: scale(0);
-    font-family: Kingofthieves;
+    font-family: "Kingofthieves";
     font-size: 25px;
     //text-shadow: 0 0 3px #ccff02;
 }
