@@ -138,4 +138,27 @@ p.logo__title {
     text-shadow: 0 0 3px #ccff02;
 } 
 
-   
+/* pydata change fonts */
+
+        @font-face {
+            font-family: "InriaSans";
+            src: url("../fonts/Inria/InriaSans/Web/InriaSans-Regular.woff2")
+               format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "InriaSerif";
+            src: url("../fonts/Inria/InriaSerif/Web/InriaSerif-Bold.woff2")
+               format("woff2");
+            font-weight: 700;
+            font-style: bold;
+            font-display: swap;
+        }
+
+body {
+    --pst-font-family-base: "InriaSans", var(--pst-font-family-base-system);
+    --pst-font-family-heading: "InriaSerif", var(--pst-font-family-base-system);
+    --pst-font-family-monospace: "DejaVu Sans Mono", Courier, var(--pst-font-family-monospace-system);
+}
